@@ -1,1 +1,0 @@
-[ "oppvask" , "butikk" , "søppel" , "bading" , "passing", "støvsuge" , "søster" ]
