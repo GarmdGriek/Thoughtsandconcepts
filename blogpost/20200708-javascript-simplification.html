@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Thoughts and Concepts by Nicolai Imset</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheet/blog.css">
+        <meta charset="UTF-8">
+    </head>
+    <body onload=menu()>
+        <div id="header">
+            <div class="container unused"></div>
+                <a id="header-title" href="/index.html"></a>
+                <ul id="header-nav">
+                </ul>
+        </div> 
+        <div id="content">
+            <div class=menu-left>
+                <ul id="menu-left">
+                </ul>
+            </div>
+            <div class="container">
+                <div class="post-author">
+                    <img src="/images/me.jpg">
+                    <span>Nicolai Imset </span>
+                    <p class="author-contact"><a href="mailto:nicolai.imset@gmail.com?subject=webEnquiry" target="_blank">Contact</a></p>
+                    <p class="post-date">8 July 2020</p>
+                    <a href="/blogpost/20200708-javascript-simplification.html"><h3 class="post-title">Javascript simplification</h3></a>
+                    <div class="post-content">
+                        <p>Today I did something cool, or so I think anyway. </p>
+                        <p>In essence what I did was to simplify and reduce the amount of code written to create the nav bar on the side and the header.
+                            I have previously treated all of these seperatly with each menuitem in the nav bar (July, My presence and so on) running it's own loop to generate parts of the navbar.</p>
+                        <p>In the past I've  used arrays to store the link information and the text information. Example "creating the blog" and "/blogpost/20200701-creating-the-blog.html" has been stored
+                            in seperate arrays, (together with the rest of the links under July). I have been meaning to simplify this for some time, but not really been sure how to sort the different varibles. 
+                            Well today it came to me. It was almost to simple really. I decided to nest the arrays inside arrays then run a nested loop, the first going through the "container" array (the array that contains all the other arrays)
+                            and the nested loop running through the nestedarray. This took me from 7 almost identical loops (only variables differed) to one nested one. This uses 2 indexes a "mainIndex" and an "index" to keep track of the mainloop
+                            and nestedloop respectivly. This was not really on the planned todo, but kind of falls under simplifying the code. And wil lbe added today to the updated "website-plans" page. </p>
+                            <p>Now what I really need to do is to look at the code for my daughters allowance. And also a logon solution that is a little more robust. Think I can do something very basic in Javascript. But very basic and not really
+                            very secure I would assume, more for a dynamic approach to logging on atm and what content to show. Hopefully something I can reuse when I get as far as creating a publishing solution.</p>
+                            <br>
+                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">As an alternative to rasberry pi?<br><br>If you&#39;ve ever wanted to install a web server on your Android device, you&#39;re in luck. This walk-through explains how to install and configure HTTP Server powered by Apache.<a href="https://t.co/LjiXpQbLWh">https://t.co/LjiXpQbLWh</a>.</p>&mdash; Nicolai Imset (@NicolaiImset) <a href="https://twitter.com/NicolaiImset/status/1280927289811841026?ref_src=twsrc%5Etfw">July 8, 2020</a></blockquote> 
+                            <p>I also found a mobile http server and it can be visited here (site not being updated and might be down) http://nicolaiimset.serveblog.net:8081/index.html.</p> 
+                            <br>
+                            <p>Finally this blog/site also got a new link https://nicolaiimset.serveblog.net:8080/index.html but I do need a new server certificate for that on the NAS. 
+                            So still using imset.myqnapcloud.com:8080 which is likely what you used to get here.
+
+                            -Nicolai out</p>
+                    </div>
+                </div>
+                <br><br><br><br>
+        </div>
+        <div id="footer">
+            <p class="footer"></p>
+        </div>
+    </body>
+    <script src="/script/menu.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</html>
+    

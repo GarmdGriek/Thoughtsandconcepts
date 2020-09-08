@@ -1,0 +1,269 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+:root {
+    --main-color:rgb(169, 213, 224);
+    --footer-color:rgb(192, 194, 169);
+    --menu-color:rgb(255, 255, 255);
+    --a-color:rgb(62, 45, 107);
+    --menu-visible:hidden;
+    --width:600px;
+}
+body {
+    color: #555;
+    margin: 0;
+    font-family: "Montserrat",sans-serif;
+}
+html, body {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+a {
+    color: #023242;
+    text-decoration: none;
+}
+span {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold
+}
+#header{
+    position: initial;
+    background-color: var(--main-color);
+    height: 50px;
+    line-height: 50px;
+}
+#header a{
+    color:var(--a-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+#header a:hover{
+    color: rgb(255, 255, 255);
+}
+#header-title {
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+#header-nav {
+    display: block;
+    float: right;
+    margin-top: 0;
+}
+#header-nav li {
+    display: inline ;
+    padding-right: 20px;
+}
+.container { 
+    max-width: 70%;
+    margin: 0 5% auto 300px;
+}
+#footer {
+    background-color: var(--footer-color);
+    color: white;
+    padding: 10px 0;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#footer .column {
+    min-width: 70%;
+    vertical-align: top;
+}
+.post .about {
+    max-width: 70%;
+    margin: 0 5% auto 300px;
+    padding: 60px 0;
+}
+
+.post-author img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin: 16px,16px,16px,16px;
+}
+.post-author{
+    padding-top: 25px;
+}
+.gallery img {
+    width: 150px;
+    height: 150px;
+    vertical-align: middle;
+    border-radius: 25%;
+    padding: 20px;
+}
+.post-date {
+    color: #d2d2d2;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+h1,h2,h3,h4{
+    color:#333;
+    text-transform: uppercase;
+    font-weight: bold
+}
+.post-title a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.post-title a:hover{
+    color: #f6a623;
+}
+.about-author img{
+    border-radius: 50%;
+    float: left;
+    margin: 5px 25px 25px 25px;
+}
+.about-content .about-title {
+    width: 500px;
+    float: right;
+    height: fit-content;
+}
+.unused {
+    visibility: hidden;
+}
+.bottom.unused {
+    padding: 10px 0;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.menu-left {
+    font-size: 10px;
+    padding: 0 10px 0 0;
+    float: left;
+    position: fixed;
+    background-color: var(--menu-color); 
+    color: var(--a-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: fit-content;
+    border-radius: 0 0 15px 0;
+}
+.menu-left a{
+    color: var(--a-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.menu-left a:hover{
+    color: rgb(255, 255, 255);
+}
+.mobile-menu {
+    background-color: var(--menu-color); 
+    color: var(--a-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: fit-content;
+    border-radius: 0 0 15px 0;
+}
+.mobile-menu a{
+    color: var(--a-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.delltech {
+    border-radius: 25px;
+    height: 300px;
+    width: 550px;
+}
+.cancelled{
+    color: lightgrey;
+}
+.cancelled::before {
+    content: "C: ";
+    color: red;
+}
+.cancelled {
+    text-decoration: line-through;
+    color: lightpink;
+}
+
+.footer::before {
+    content: "#Iwork4Dell but this is my personal blog. It will contain a bit about Dell Technologies, but also other items I find of interest.";
+}
+.complete{
+    color: var(--main-color);;
+}
+.complete::before{
+    content: "P: ";
+}
+.workinprogress{
+    color: lightskyblue;
+}
+.workinprogress::before{
+    content: "W: ";
+}
+.design{
+    color: rgb(26, 26, 26);
+}
+.design::before{
+    content: "D: ";
+}
+#header-title::before{
+    content:"Thoughts and Concepts ";
+}
+.header-dell::after{
+    content: "writing content for Dell Technologies";
+}
+.homebutton::before{
+    content:"home"
+}
+.pAllowance2 {
+    background-color: var(--main-color);
+    padding: 25px 25px 25px 25px;
+    margin: 10px 200px 10px 200px ;
+    border-radius: 10px;
+    width: var(--width);
+    text-align: center;
+}
+.pAllowance1 {
+    padding: 25px 25px 25px 25px;
+    margin: 10px 200px 10px 200px ;
+    border-radius: 10px;
+    width: var(--width);
+    text-align: center;
+}
+.tAllowance {
+  padding: 5px 5px 5px 5px;
+  margin: 10px 200px 10px 200px ;
+  border-radius: 10px;
+  width:var(--width);
+  text-align: center;
+}
+.checkAllowance{
+  background-color: var(--main-color);
+  padding: 25px 25px 25px 25px;
+  margin: 10px 200px 10px 200px ;
+  border-radius: 10px; 
+  width:var(--width);
+}
+.allowance {
+    border: 1px, solid, var(--main-color);
+    text-align: center;
+    align-items: left;
+    align-content: left;
+    width: 70%;
+    width:var(--width);
+}
+button{
+    border: 1px solid;
+    background-color: var(--main-color);
+    border-radius: 1px;
+}

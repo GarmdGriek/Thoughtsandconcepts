@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script type="module"> /* functional demo */
+        import Sha256 from '//cdn.jsdelivr.net/gh/chrisveness/crypto@latest/sha256.js';
+
+        document.addEventListener('DOMContentLoaded', function(event) {
+            document.querySelector('#passwordEntered').oninput = function() {
+                var t1 = performance.now();
+                var hash = Sha256.hash(this.value);
+                var t2 = performance.now();
+
+                document.querySelector('#userpassword').value = hash;
+                document.querySelector('#time').value = (t2-t1).toFixed(3)+'ms';
+            };
+
+            document.querySelector('#passwordEntered').focus();
+            document.querySelector('#passwordEntered').select();
+
+            document.querySelector('#passwordEntered').oninput(); // initial hash call
+
+            // show source code
+            fetch('//cdn.jsdelivr.net/gh/chrisveness/crypto@latest/sha256.js')
+                .then(function(res) { return res.ok ? res.text() : res.status+' '+res.statusText; })
+                .then(function(txt) { document.querySelector('#src-code').textContent = txt; prettyPrint(); })
+                .catch(function(err) { document.querySelector('#error').textContent = err.passwordEntered; });
+        });
+    </script>
+</head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Thoughts and Concepts by Nicolai Imset</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheet/blog.css">
+    </head>
+    <body onload=readpass(),readuser()>
+        <div id="header">
+            <div class="container unused"></div>
+            <a id="header-title" href="/index.html"></a>
+                <ul id="header-nav">
+                </ul>
+        </div> 
+         <div id="content">
+            <div class="container">
+                <div class="container ">
+                    <h3 class="post-title">Login to your page</h3></a>
+                        <div class="post-content">
+                            <input id="username" type="text" placeholder="Username" value="Anniken"><br>
+                            <input id="passwordEntered" type="password" placeholder="*****"><br>
+                            <button id="loginbutton" onclick="logon()">Login</button>
+                            <br>
+                            <p id="error" class="alert"></p>
+                            <p id="wrongpassword"></p>
+                            <p id="userpassword" class="unused" readonly class="width-full"></p>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br>
+            </div>
+
+
+         <div id="footer">
+            <p class="footer"></p>
+        </div>
+    </body>
+        <script src="/script/logon.js"></script>
+</html>

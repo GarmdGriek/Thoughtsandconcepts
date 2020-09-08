@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Thoughts and Concepts by Nicolai Imset</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheet/blog.css">
+        <meta charset="UTF-8">
+    </head>
+    <body onload=menu()>
+        <div id="header">
+            <div class="container unused"></div>
+                <a id="header-title" class="header-dell" href="/index.html"></a>
+                <ul id="header-nav">
+                </ul>
+        </div> 
+        <div id="content">
+            <div class=menu-left>
+                <ul id="menu-left">
+                </ul>
+            </div>
+            <div class="container">
+                <div class="post-author">
+                    <img src="/images/me.jpg">
+                    <span>Nicolai Imset </span>
+                    <p class="author-contact"><a href="mailto:nicolai.imset@gmail.com?subject=webEnquiry" target="_blank">Contact</a></p>
+                    <p class="post-date">6 July 2020</p>
+                    <a href="#"><h3 class="post-title">Hadoop + OneFS = &#9825</h3></a>
+                </div>
+                    <div class="post-content">
+                        <p>Over the last year or so Cloudera and Dell Technologies UDS (Unstructured Data Storage division) have been validating solutions and products together.
+                        This has resulted in some reccomendations and certifications on CDH and HDP and hopefully soon CDP. This is fantastic news for customers and partners alike</p>
+                        <p>Let me explain. About 18 months ago Cloudera and Hortonworks merged as companies, this means customers now have one less option on the market.
+                        There used to be 3 big players as in Cloudera, Hortonworks and Apache. The two former are commercial companies while Apache is opensource software.</p>
+                        <p> Now I wrote that Cloudera and Hortonworks had merged and that this was good for the customers. And I mean to explain why here. It's simple really, 
+                        instead of now having to get knowledge aobut 2 or 3 (potentially) more hadoop ecosystems there is now one single source which takes the best from the 2 largest. 
+                        I have no idea if that will be for the best in 5 years or if hadoop will be the prefered way of analyising big data then, but for now it's good. Good for cloudera, good for Hortonworks,
+                        good for Dell and good for the customer.(OneFS also support other distributions like Ambari, Pivotal and others. But the 3 mentioned are the most common with Cloudera and Hortonworks being the absolute most seen 
+                        at our customers.)</p>
+                        <p>So why OneFS. Well there are several reasons, but mainly because we decouple the storage from the compute, giving agility to the installation</p>
+                        
+                        <img class="delltech" src="/images/Delltech/hdfs-traditional.jpg">
+                        <p>This is a proven solution that works but lacks agility, however with PowerScale you can do this</p>
+                        <img class="delltech" src="/images/Delltech/hdfs-isilon-namenode.jpg">
+                        <p>and then you can have clients read the results directly from the PowerScale installation, using nfs or smb protocols.<br>
+                        How an PowerScale OneFS Hadoop implementation differs from a traditional Hadoop deployment</p>
+                        <p></p><strong>A Hadoop implementation with OneFS differs from a typical Hadoop implementation in the following ways:</strong>
+                        <ul>
+                            <li>The Hadoop compute and HDFS storage layers are on separate clusters instead of the same cluster.</li>
+                            <li> Instead of storing data within a Hadoop distributed file system, the storage layer functionality is fulfilled by OneFS on an PowerScale
+                            cluster. Nodes on the PowerScale cluster function as both a NameNode and a DataNode.</li>
+                            <li>The compute layer is established on a Hadoop compute cluster that is separate from the PowerScale cluster. The Hadoop MapReduce
+                            framework and its components are installed on the Hadoop compute cluster only.
+                            <li>Instead of a storage layer, HDFS is implemented on OneFS as a native, lightweight protocol layer between the PowerScale cluster and
+                            the Hadoop compute cluster. Clients from the Hadoop compute cluster connect over HDFS to access data on the PowerScale cluster.</li>
+                            <li>In addition to HDFS, clients from the Hadoop compute cluster can connect to the PowerScale cluster over any protocol that OneFS
+                            supports such as NFS, SMB, FTP, and HTTP. PowerScale OneFS is the only non-standard implementation of HDFS offered that
+                            allows for multi-protocol access. PowerScale makes for an ideal alternative storage system to native HDFS by marrying HDFS services
+                            with enterprise-grade data management features.</li>
+                            <li>Hadoop compute clients can connect to any node on the PowerScale cluster that functions as a NameNode instead of being routed by
+                            a single NameNode.</li>
+                        </ul></p>
+
+
+                        <p><a href="https://www.dell.com/support/article/en-us/sln318947/hadoop-distributions-and-products-supported-by-onefs?lang=en" target="_blank">This</a> page 
+                        has an overview of "Hadoop Distributions and Products Supported by OneFS")</p>
+                        <p>Some other resources to read more aobut Cloudera/Hortonworks and OneFS</p>
+                        <ul>
+                            <li><a href="https://www.cloudera.com/content/dam/www/marketing/resources/whitepapers/wp-using-tde-with-isilon-hdfs.pdf.landing.html" target="_blank">Using Transparent Data Encryption with Isilon HDFS</a></li>
+                            <li><a href="https://blog.cloudera.com/dell-emc-isilon-ecs-are-getting-qats-certified-what-does-that-mean-for-you/" target="_blank">Dell EMC Isilon & ECS are getting QATS Certified, what does that mean for you?</a></li>
+                            <li><a href="https://blog.cloudera.com/cloudera-qats-program-certifies-dell-emc-isilon-onefs-v8-2-certified-with-hdp-3-1-and-cdh-6-3-1/" target="_blank">Cloudera QATS program certifies Dell EMC Isilon OneFS v8.2 certified with HDP 3.1 and CDH 6.3.1</a></li>
+                            <li><a href="https://www.dellemc.com/en-us/collaterals/unauth/quick-reference-guides/products/storage/docu92689.pdf" target="_blank">PowerScale OneFS HDFS Reference Guide</a></li>
+                            <li><a href="https://www.dellemc.com/nb-no/collaterals/unauth/briefs-handouts/products/storage/h18300-increasing-hdfs-performance-powerscale-google-cloud.pdf" target="_blank">Increasing HDFS Performance with PowerScale for Google Cloud</a></li>
+
+                        </ul>
+                        <p>#IWork4Dell is something I need to declare when I write</p>
+                    </div>
+
+            </div>
+            <br><br><br><br>
+        </div>
+        <div id="footer">
+            <p class="footer"></p>
+        </div>
+    </body>
+    <script src="/script/menu.js"></script>
+</html>
+    

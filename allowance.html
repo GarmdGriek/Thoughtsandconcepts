@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Thoughts and Concepts by Nicolai Imset</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheet/blog.css">
+        <meta charset="Utf-8" >
+    </head>
+    <body onload=readTasks(),readValue(),menu()>
+        <div id="header">
+            <div class="container unused"></div>
+                <a id="header-title" href="/index.html"></a>
+                <ul id="header-nav">
+                </ul>
+        </div> 
+        <div id="content">
+            <div class=menu-left>
+                <ul id="menu-left">
+                </ul>
+            </div> 
+                    <div class="container">
+                    <div class=checkAllowance>
+                        <input type="checkbox" id="mandag" name="ukedag" placeholder="Mandag" value="Mandag">Mandag
+                        <input type="checkbox" id="tirsdag" name="ukedag" placeholder="tirsdag" value="Tirsdag">Tirsdag
+                        <input type="checkbox" id="onsdag" name="ukedag" placeholder="onsdag" value="Onsdag">Onsdag
+                        <input type="checkbox" id="torsdag" name="ukedag" placeholder="torsdag" value="Torsdag">Torsdag
+                        <input type="checkbox" id="fredag" name="ukedag" placeholder="Fredag" value="Fredag">Fredag
+                        <input type="checkbox" id="lørdag" name="ukedag" placeholder="lørdag" value="Lørdag">Lørdag
+                        <input type="checkbox" id="søndag" name="ukedag" placeholder="søndag" value="Søndag">Søndag
+                    </div><br>
+                    <div class=pAllowance2><input type="text" id="completedTask" placeholder="Utført oppgave" required>
+                        <p>Akseptert input er Oppvask, Butikk, Søster, Søppel, Bading, Passing eller Støvsuge</p></div>
+                    <div class=pAllowance1 ><button id="myBtn" onclick="allowance()">Registrer</button> <button onclick="printDiv('printableArea')">Utskrift</button></div>
+                    <p id="messageOppgave"></p>
+                    <div id="printableArea">
+                        <br><p id="demo"></p>
+                        <Table class=tAllowance id="AllowanceTable">
+                            <tr>
+                                <th id="value">Verdi</th>
+                                <th id="task">Oppgave</th>
+                                <th id="salary">Lønn</th>
+                                <th id="weekDay">Ukedag</th>
+                            </tr>
+                            <tr id="allowanceTableRow">
+                            </tr>
+                        </Table>
+                    </div>
+                    <br><br><br><br>
+                </div>
+            </div>
+            <div id="footer">
+                <p class="footer"></p>
+            </div>
+        </body>
+        <script src="/script/allowance.js"></script>
+        <script src="/script/menu.js"></script>
+    </body>
+</html>
